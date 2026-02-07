@@ -4,6 +4,11 @@ return {
     priority = 1000,
     config = true,
     opts = {
+      italic = {
+        strings = true,
+        operators = true,
+        functions = true,
+      },
       palette_overrides = {
         dark0_hard = "#101010", -- gruber-darker-bg-1
         dark0 = "#181818", -- gruber-darker-bg
@@ -77,8 +82,16 @@ return {
       overrides = {
         Comment = { fg = "#cc8c3c", italic = true },
         LspInlayHint = { fg = "#52494e", bg = "NONE" },
+        Red = { fg = "#f43841", italic = true },
 
         ["@comment"] = { link = "Comment" },
+        ["@keyword.modifier.java"] = { link = "Red" },
+        ["@keyword.operator"] = { link = "Red" },
+        ["@keyword.conditional"] = { link = "Red" },
+        ["@keyword.return"] = { link = "Red" },
+        ["@keyword.extends"] = { link = "Red" },
+        ["@keyword.java"] = { link = "Red" },
+        ["@keyword.repeat"] = { link = "Red" },
       },
     },
   },
